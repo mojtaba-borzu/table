@@ -1,29 +1,29 @@
 //libraries
-import React, { useEffect, useState } from 'react'
-import { useDebounce } from 'rooks'
-import Close_icon from '../../common/icons/Close_icon'
+import React, { useEffect, useState } from "react";
+import { useDebounce } from "rooks";
+import Close_icon from "../../common/icons/Close_icon";
 
 function SearchNews({
   search,
   setSearch,
 }: {
-  search: string | number | null
-  setSearch: any
+  search: string | number | null;
+  setSearch: any;
 }) {
-  const setValueDebounced = useDebounce((term) => setSearch(term), 500)
-  const [showInput, setShowInput] = useState(false)
+  const setValueDebounced = useDebounce((term) => setSearch(term), 500);
+  const [showInput, setShowInput] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setShowInput(false), 10)
-  }, [showInput])
+    setTimeout(() => setShowInput(false), 10);
+  }, [showInput]);
   return (
     <div className="   w-full h-[56px] ">
       <div className="w-full   h-[56px]  bg-base-light-surface dark:bg-base-dark-surface rounded-[12px] flex flex-row justify-between items-center px-[17.69px] gap-[8px]">
         <div className="flex felx-row items-center gap-[8px]">
           <span>
             <svg
-              width="21"
-              height="21"
+              width="16"
+              height="16"
               viewBox="0 0 21 21"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -38,9 +38,9 @@ function SearchNews({
             <input
               defaultValue={search}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                setValueDebounced(e.currentTarget.value)
+                setValueDebounced(e.currentTarget.value);
               }}
-              className="w-full  h-full bg-base-light-surface dark:bg-base-dark-surface text-base-text-light-1 dark:text-base-text-dark-1   px-[10px] outline-none"
+              className="w-full  h-full bg-base-light-surface dark:bg-base-dark-surface text-base-text-light-1 typography-fn-button-small dark:text-base-text-dark-1   px-[10px] outline-none"
               placeholder="جستجو"
             />
           )}
@@ -48,8 +48,8 @@ function SearchNews({
         {search && (
           <div
             onClick={() => {
-              setShowInput(true)
-              setSearch('')
+              setShowInput(true);
+              setSearch("");
             }}
             className="w-[32px] h-[32px] rounded-full flex justify-center items-center duration-150 active:scale-90 cursor-pointer text-base-text-light-3 dark:text-base-text-dark-3    bg-base-light-background dark:bg-base-dark-background"
           >
@@ -65,7 +65,7 @@ function SearchNews({
         )}
       </div>
     </div>
-  )
+  );
 }
 
-export default SearchNews
+export default SearchNews;

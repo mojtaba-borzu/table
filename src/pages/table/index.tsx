@@ -4,6 +4,8 @@ import ArrowUp_table_icon from "../../components/common/icons/ArrowUp_table_icon
 import SimplePagination from "../../components/material/pagination/SimplePagination";
 import SearchItem from "../../components/material/search/SearchItem";
 import Chevron_left_icon from "../../components/common/icons/Chevron_left_icon";
+import Trush_icon from "../../components/common/icons/Trush_icon";
+import Edit_icon from "../../components/common/icons/Edit_icon";
 
 const titleList = [
   { id: 2, label: "نام انگلیسی", sort: false },
@@ -14,7 +16,15 @@ const bodyList: any = [
   { id: 2, en_Name: "apple", fa_Name: "اپل" },
   { id: 3, en_Name: "xiomi", fa_Name: "شیایومی" },
   { id: 4, en_Name: "howawi", fa_Name: "هووای" },
-  { id: 5, en_Name: "samsung", fa_Name: "سامسونگ" },
+  {
+    id: 5,
+    en_Name: "samsung",
+    fa_Name: [
+      "سامسونگ",
+      { name: "اسم", phone: "a53" },
+      { name: "اسم", phone: "a52" },
+    ],
+  },
   { id: 6, en_Name: "apple", fa_Name: "اپل" },
   {
     id: 7,
@@ -35,6 +45,8 @@ function index() {
   const [sortStatus, setSortStatus] = useState(0);
   const [sort, setSort] = useState({ label: "", sorting: "" });
   const [detailsStatus, setDetailsStatus] = useState(false);
+  const [idDeatails, setIdDetails] = useState(0);
+  const [listBrand, setListBran] = useState(bodyList);
 
   return (
     <div dir="rtl" className="w-full h-full flex  flex-col items-center ">
@@ -43,30 +55,28 @@ function index() {
           detailsStatus && setDetailsStatus(false);
           sortStatus && setSortStatus(0);
         }}
-        className="w-[1000px] border rounded-[12px]"
+        className="w-full border rounded-[12px]"
       >
         <div className="w-full flex flex-row justify-between items-center px-[20px]">
           <div
-            className="w-[300px] h-[56px] my-[12px] text-[20px] font-semibold
+            className="w-[300px] h-[32px] my-[5px] text-[20px] font-semibold
          flex justify-center items-center"
-          >
-            برند ها
-          </div>
-          <div className="w-[300px] h-[56px] my-[12px] border rounded-[12px] flex items-center">
+          ></div>
+          <div className="w-[300px] h-[32px] my-[5px] border rounded-[12px] flex items-center">
             <SearchItem search={search} setSearch={setSearch} />
           </div>
         </div>
 
         <div className="flex flex-col border-t">
           <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div className="py-1 inline-block min-w-full sm:px-6 lg:px-8">
               <div className="overflow-hidden">
                 <table className="min-w-full table-auto">
                   <thead className="bg-white border-b">
                     <tr>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-1 py-4  text-center border-l"
+                        className="text-sm font-medium text-gray-900 px-1 py-1   text-center border-l"
                       >
                         ردیف
                       </th>
@@ -74,9 +84,9 @@ function index() {
                         <th
                           key={index}
                           scope="col"
-                          className=" text-sm font-medium text-gray-900 px-6 py-4 text-right border-l"
+                          className=" text-sm font-medium text-gray-900 px-6 py-1 text-right border-l "
                         >
-                          <div className="flex flex-row justify-between items-center gap-[10px] ">
+                          <div className="flex flex-row justify-between items-center gap-[10px] typography-fn-button-small">
                             <span className="truncate"> {item.label}</span>
 
                             <div
@@ -110,7 +120,7 @@ function index() {
                                     });
                                     setSortStatus(0);
                                   }}
-                                  className={`py-[10px] w-full flex flex-row justify-between items-center  px-[10px] rounded-[12px] ${
+                                  className={`py-[2px] w-full flex flex-row justify-between items-center  px-[10px] rounded-[12px] ${
                                     sort.label && sort.sorting == "up"
                                       ? "bg-blue-400 text-white"
                                       : "hover:bg-gray-100"
@@ -130,7 +140,7 @@ function index() {
                                     });
                                     setSortStatus(0);
                                   }}
-                                  className={`w-full py-[10px] flex flex-row items-center justify-between  px-[10px] rounded-[12px] ${
+                                  className={`w-full py-[2px] flex flex-row items-center justify-between  px-[10px] rounded-[12px] ${
                                     sort.label && sort.sorting == "down"
                                       ? "bg-blue-400 text-white"
                                       : "hover:bg-gray-100"
@@ -149,27 +159,27 @@ function index() {
                     </tr>
                   </thead>
                   <tbody>
-                    {bodyList.map((item, index) => (
+                    {listBrand.map((item, index) => (
                       <tr
                         key={index}
-                        className={`${
+                        className={` ${
                           index % 2 ? "bg-white" : "bg-gray-100"
                         } border-b`}
                       >
-                        {Object.values(bodyList[index]).map(
+                        {Object.values(listBrand[index]).map(
                           (value: any, index) => (
                             <td
                               key={index}
-                              className="px-6 py-2 whitespace-nowrap text-sm text-start font-medium text-gray-900 border-l"
+                              className="px-6 py-1 whitespace-nowrap text-sm text-start font-medium text-gray-900 border-l"
                             >
                               <div
-                                className={` w-full flex items-center ${
+                                className={` w-full flex items-center typography-fn-body-small  ${
                                   index == 0
                                     ? "justify-center "
                                     : "justify-between "
                                 }`}
                               >
-                                <span className="py-2">
+                                <span className="py-1">
                                   {typeof value != "object" ? value : value[0]}
                                 </span>
                                 {typeof value == "object" && (
@@ -177,12 +187,13 @@ function index() {
                                     <span
                                       onClick={() => {
                                         setDetailsStatus(!detailsStatus);
+                                        setIdDetails(item);
                                       }}
                                       className={` ${
-                                        detailsStatus
+                                        detailsStatus && idDeatails == item
                                           ? " rotate-90 "
                                           : " -rotate-90 "
-                                      } duration-300 cursor-pointer w-[32px] h-[32px] rounded-full text-green-600 opacity-60 hover:opacity-100 bg-gray-200 flex justify-center items-center`}
+                                      } duration-300 cursor-pointer w-[20px] h-[20px] rounded-full text-blue-600 opacity-80 hover:opacity-100 bg-gray-300 flex justify-center items-center`}
                                     >
                                       <Chevron_left_icon />
                                     </span>
@@ -193,7 +204,7 @@ function index() {
                               {typeof value == "object" && (
                                 <div
                                   className={` w-full duration-300 rounded-[12px] overflow-hidden ${
-                                    detailsStatus
+                                    detailsStatus && idDeatails == item
                                       ? "my-[10px] max-h-[100px] border "
                                       : "max-h-0"
                                   }`}
@@ -218,17 +229,20 @@ function index() {
                           )
                         )}
 
-                        <td className="px-2 border-l">
-                          <div className="w-full flex justify-center">
-                            <button className="border border-blue-300  rounded-[12px] py-[5px] px-[10px] text-blue-500  typography-fn-button-small">
-                              تغییرات
+                        <td className=" border-l">
+                          <div className="w-full flex justify-center gap-[20px]">
+                            <button className=" py-[2px]  text-blue-500  typography-fn-button-small">
+                              <Edit_icon />
                             </button>
-                          </div>
-                        </td>
-                        <td className="px-2 border-l">
-                          <div className="w-full flex justify-center">
-                            <button className="border border-red-300  rounded-[12px] py-[5px] px-[10px] text-red-500 typography-fn-button-small">
-                              حذف
+                            <button
+                              onClick={() => {
+                                setListBran(
+                                  listBrand.filter((row) => row != item)
+                                );
+                              }}
+                              className="py-[5px] text-red-500 typography-fn-button-small"
+                            >
+                              <Trush_icon />
                             </button>
                           </div>
                         </td>
@@ -240,7 +254,7 @@ function index() {
             </div>
           </div>
         </div>
-        <div className=" flex justify-center py-[10px]">
+        <div className=" flex justify-center py-[2px]">
           <SimplePagination
             className="pagination-bar"
             currentPage={1}

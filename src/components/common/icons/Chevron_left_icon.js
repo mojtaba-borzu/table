@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Chevron_left_icon() {
   return (
     <svg
-      width="8"
+      width="6"
       height="14"
       viewBox="0 0 8 14"
       fill="currentColor"
@@ -14,5 +14,5 @@ export default function Chevron_left_icon() {
         fill="currentColor"
       />
     </svg>
-  )
+  );
 }
