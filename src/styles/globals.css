@@ -1,0 +1,771 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /***************** */
+  /* IRANSansX */
+  /***************** */
+
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 100;
+    src: url("/fonts/IRANSansX/IRANSansX-Thin.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 200;
+    src: url("/fonts/IRANSansX/IRANSansX-UltraLight.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 300;
+    src: url("/fonts/IRANSansX/IRANSansX-Light.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/IRANSansX/IRANSansX-Medium.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/IRANSansX/IRANSansX-DemiBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/IRANSansX/IRANSansX-ExtraBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 900;
+    src: url("/fonts/IRANSansX/IRANSansX-Black.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/IRANSansX/IRANSansX-Bold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/IRANSansX/IRANSansX-Regular.woff") format("woff");
+  }
+
+  /***************** */
+  /* IRANSansXFaNum */
+  /***************** */
+
+  @font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: 100;
+    src: url("/fonts/IRANSansXFaNum/IRANSansXFaNum-Thin.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: 200;
+    src: url("/fonts/IRANSansXFaNum/IRANSansXFaNum-UltraLight.woff")
+      format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: 300;
+    src: url("/fonts/IRANSansXFaNum/IRANSansXFaNum-Light.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/IRANSansXFaNum/IRANSansXFaNum-Medium.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/IRANSansXFaNum/IRANSansXFaNum-DemiBold.woff")
+      format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/IRANSansXFaNum/IRANSansXFaNum-ExtraBold.woff")
+      format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: 900;
+    src: url("/fonts/IRANSansXFaNum/IRANSansXFaNum-Black.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/IRANSansXFaNum/IRANSansXFaNum-Bold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: IRANSansXFaNum;
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/IRANSansXFaNum/IRANSansXFaNum-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-Medium.eot");
+    src: local("SF Pro Display Medium"), local("SFProDisplay-Medium"),
+      url("/fonts/SFProDisplay/SFProDisplay-Medium.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-Medium.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-Medium.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-Heavy.eot");
+    src: local("SF Pro Display Heavy"), local("SFProDisplay-Heavy"),
+      url("/fonts/SFProDisplay/SFProDisplay-Heavy.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-Heavy.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-Heavy.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-Heavy.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-UltralightItalic.eot");
+    src: local("SF Pro Display UltralightItalic"),
+      local("SFProDisplay-UltralightItalic"),
+      url("/fonts/SFProDisplay/SFProDisplay-UltralightItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-UltralightItalic.woff2")
+        format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-UltralightItalic.woff")
+        format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-UltralightItalic.ttf")
+        format("truetype");
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-RegularItalic.eot");
+    src: local("SF Pro Display Regular Italic"),
+      local("SFProDisplay-RegularItalic"),
+      url("/fonts/SFProDisplay/SFProDisplay-RegularItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-RegularItalic.woff2")
+        format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-RegularItalic.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-RegularItalic.ttf")
+        format("truetype");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-Thin.eot");
+    src: local("SF Pro Display Thin"), local("SFProDisplay-Thin"),
+      url("/fonts/SFProDisplay/SFProDisplay-Thin.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-Thin.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-Thin.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-Light.eot");
+    src: local("SF Pro Display Light"), local("SFProDisplay-Light"),
+      url("/fonts/SFProDisplay/SFProDisplay-Light.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-Light.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-Light.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-Light.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-BlackItalic.eot");
+    src: local("SF Pro Display Black Italic"), local("SFProDisplay-BlackItalic"),
+      url("/fonts/SFProDisplay/SFProDisplay-BlackItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-BlackItalic.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-BlackItalic.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-BlackItalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-Bold.eot");
+    src: local("SF Pro Display Bold"), local("SFProDisplay-Bold"),
+      url("/fonts/SFProDisplay/SFProDisplay-Bold.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-Bold.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-Bold.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-Black.eot");
+    src: local("SF Pro Display Black"), local("SFProDisplay-Black"),
+      url("/fonts/SFProDisplay/SFProDisplay-Black.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-Black.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-Black.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-SemiboldItalic.eot");
+    src: local("SF Pro Display SemiboldItalic"),
+      local("SFProDisplay-SemiboldItalic"),
+      url("/fonts/SFProDisplay/SFProDisplay-SemiboldItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-SemiboldItalic.woff2")
+        format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-SemiboldItalic.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-SemiboldItalic.ttf")
+        format("truetype");
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-Ultralight.eot");
+    src: local("SF Pro Display Ultralight"), local("SFProDisplay-Ultralight"),
+      url("/fonts/SFProDisplay/SFProDisplay-Ultralight.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-Ultralight.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-Ultralight.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-Ultralight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-LightItalic.eot");
+    src: local("SF Pro Display LightItalic"), local("SFProDisplay-LightItalic"),
+      url("/fonts/SFProDisplay/SFProDisplay-LightItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-LightItalic.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-LightItalic.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-LightItalic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-ThinItalic.eot");
+    src: local("SF Pro Display ThinItalic"), local("SFProDisplay-ThinItalic"),
+      url("/fonts/SFProDisplay/SFProDisplay-ThinItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-ThinItalic.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-ThinItalic.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-MediumItalic.eot");
+    src: local("SF Pro Display MediumItalic"),
+      local("SFProDisplay-MediumItalic"),
+      url("/fonts/SFProDisplay/SFProDisplay-MediumItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-MediumItalic.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-MediumItalic.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-MediumItalic.ttf")
+        format("truetype");
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-Semibold.eot");
+    src: local("SF Pro Display Semibold"), local("SFProDisplay-Semibold"),
+      url("/fonts/SFProDisplay/SFProDisplay-Semibold.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-Semibold.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-Semibold.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-HeavyItalic.eot");
+    src: local("SF Pro Display HeavyItalic"), local("SFProDisplay-HeavyItalic"),
+      url("/fonts/SFProDisplay/SFProDisplay-HeavyItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-HeavyItalic.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-HeavyItalic.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-HeavyItalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-Regular.eot");
+    src: local("SF Pro Display Regular"), local("SFProDisplay-Regular"),
+      url("/fonts/SFProDisplay/SFProDisplay-Regular.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-Regular.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-Regular.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFProDisplay/SFProDisplay-BoldItalic.eot");
+    src: local("SF Pro Display BoldItalic"), local("SFProDisplay-BoldItalic"),
+      url("/fonts/SFProDisplay/SFProDisplay-BoldItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/SFProDisplay/SFProDisplay-BoldItalic.woff2") format("woff2"),
+      url("/fonts/SFProDisplay/SFProDisplay-BoldItalic.woff") format("woff"),
+      url("/fonts/SFProDisplay/SFProDisplay-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  body {
+    font-family: IRANSansXFaNum, "SF Pro Display";
+    font-weight: 600;
+  }
+
+  .ltr {
+    font-family: "SF Pro Display";
+    font-weight: 600;
+  }
+
+  .rtl {
+    font-family: IRANSansXFaNum;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .typography-fn-display-large {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 57px;
+    line-height: 102px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-display-medium {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 88px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-display-small {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-headline-large {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 62px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-headline-medium {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 52px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-headline-small {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-title-large {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-title-medium {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-title-n {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-title-small {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-button-large {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-button-medium {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-button-small {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-body-large {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-body-medium {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-fn-body-small {
+    font-family: "IRANSansXFaNum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-display-large {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 57px;
+    line-height: 90px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-display-medium {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-display-small {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-headline-large {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 52px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-headline-medium {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-headline-small {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-title-large {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-title-medium {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-title-small {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-button-large {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-button-medium {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-button-small {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-body-large {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-body-medium {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+
+  .typography-en-body-small {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  }
+}
+
+.pagination-container {
+  display: flex;
+  list-style-type: none;
+}
+.pagination-container .pagination-item {
+  padding: 0 8px;
+  height: 32px;
+  text-align: center;
+  margin: auto 2px;
+  color: #3d9ae8;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  letter-spacing: 0.01071em;
+  border-radius: 5px;
+  line-height: 1.43;
+  font-size: 16px;
+  min-width: 20px;
+}
+.pagination-container .pagination-item.dots:hover {
+  background-color: white;
+  color: #3d9ae8;
+  cursor: default;
+}
+.pagination-container .pagination-item:hover {
+  background-color: #3d9ae8;
+  color: white;
+  cursor: pointer;
+}
+.pagination-container .pagination-item.selected {
+  background-color: #3d9ae8;
+  color: white;
+}
+.pagination-container .pagination-item .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color: #3d9ae8; */
+}
+/* .pagination-container .pagination-item .arrow:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #3d9ae8;
+} */
+
+.pagination-container .pagination-item.disabled {
+  pointer-events: none;
+}
+.pagination-container .pagination-item.disabled .arrow::before {
+  border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+}
+.pagination-container .pagination-item.disabled:hover {
+  background-color: transparent;
+  cursor: default;
+}
