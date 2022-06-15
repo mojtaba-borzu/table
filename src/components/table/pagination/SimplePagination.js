@@ -1,4 +1,4 @@
-import { usePagination, DOTS } from './usePagination'
+import { usePagination, DOTS } from "./usePagination";
 
 //styles are in /styles/pagination.css and imported in globals.css
 
@@ -10,33 +10,33 @@ const Pagination = (props) => {
     currentPage,
     pageSize,
     className,
-  } = props
+  } = props;
 
   const paginationRange = usePagination({
     currentPage,
     totalCount,
     siblingCount,
     pageSize,
-  })
+  });
 
   if (currentPage === 0 || paginationRange.length < 2) {
-    return null
+    return null;
   }
 
   const onNext = () => {
-    onPageChange(currentPage + 1)
-  }
+    onPageChange(currentPage + 1);
+  };
 
   const onPrevious = () => {
-    onPageChange(currentPage - 1)
-  }
+    onPageChange(currentPage - 1);
+  };
 
-  let lastPage = paginationRange[paginationRange.length - 1]
+  let lastPage = paginationRange[paginationRange.length - 1];
   return (
     <ul className={`pagination-container `}>
       <li
         className={` pagination-item
-      ${currentPage === 1 && 'disabled'}`}
+      ${currentPage === 1 && "disabled"}`}
         onClick={onPrevious}
       >
         <div className="arrow left">&lt;</div>
@@ -47,7 +47,7 @@ const Pagination = (props) => {
             <li key={index} className="pagination-item dots">
               &#8230;
             </li>
-          )
+          );
         }
 
         return (
@@ -55,23 +55,23 @@ const Pagination = (props) => {
             key={index}
             className={`  pagination-item
               
-         ${pageNumber === currentPage && 'selected'}
+         ${pageNumber === currentPage && "selected"}
               `}
             onClick={() => onPageChange(pageNumber)}
           >
             {pageNumber}
           </li>
-        )
+        );
       })}
       <li
         className={`pagination-item
-         ${currentPage === lastPage && 'disabled'}`}
+         ${currentPage === lastPage && "disabled"}`}
         onClick={onNext}
       >
         <div className="arrow right">&gt;</div>
       </li>
     </ul>
-  )
-}
+  );
+};
 
-export default Pagination
+export default Pagination;

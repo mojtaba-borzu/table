@@ -1,7 +1,7 @@
 //libraries
 import React, { useEffect, useState } from "react";
 import { useDebounce } from "rooks";
-import Close_icon from "../../common/icons/Close_icon";
+import Close_icon from "../icons/Close_icon";
 
 function SearchNews({
   search,
