@@ -1,12 +1,17 @@
-import type { NextPage } from "next";
+//libraries
 import Head from "next/head";
 import { useState } from "react";
+import type { NextPage } from "next";
+
+//components
 import Table from "../components/table/Table";
 
+//data
 const headers = [
   { id: 2, label: "نام انگلیسی", sort: false },
   { id: 1, label: "نام فارسی", sort: true },
 ];
+
 const bodyList: any = [
   { id: 1, en_Name: "samsung", fa_Name: "سامسونگ" },
   { id: 2, en_Name: "apple", fa_Name: "اپل" },
@@ -24,18 +29,14 @@ const bodyList: any = [
     ],
   },
   { id: 6, en_Name: "apple", fa_Name: "اپل" },
-  {
-    id: 7,
-    en_Name: "xiomi",
-
-    fa_Name: "شیایومی",
-  },
+  { id: 7, en_Name: "xiomi", fa_Name: "شیایومی" },
   { id: 8, en_Name: "howawi", fa_Name: "هووای" },
   { id: 9, en_Name: "samsung", fa_Name: "سامسونگ" },
   { id: 10, en_Name: "apple", fa_Name: "اپل" },
 ];
 
 const IndexPage: NextPage = () => {
+  //instance
   const [search, setSearch] = useState("");
   const [editItem, setEditItem] = useState("");
   const [deleteItem, setDeleteItem] = useState("");
